@@ -12,6 +12,7 @@ import {
   TrendingUp,
   Users
 } from 'lucide-react';
+import { API_ENDPOINTS } from '../config/api';
 
 const DashboardPage = () => {
   const [internData, setInternData] = useState(null);
@@ -25,7 +26,7 @@ const DashboardPage = () => {
 
   const fetchInternData = async () => {
     try {
-      const response = await fetch('/api/intern');
+      const response = await fetch(API_ENDPOINTS.INTERN);
       if (!response.ok) {
         throw new Error('Failed to fetch data');
       }

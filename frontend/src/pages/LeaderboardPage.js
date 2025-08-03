@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Trophy, Medal, Crown, TrendingUp, Users } from 'lucide-react';
+import { API_ENDPOINTS } from '../config/api';
 
 const LeaderboardPage = () => {
   const [leaderboardData, setLeaderboardData] = useState([]);
@@ -13,7 +14,7 @@ const LeaderboardPage = () => {
 
   const fetchLeaderboardData = async () => {
     try {
-      const response = await fetch('/api/leaderboard');
+      const response = await fetch(API_ENDPOINTS.LEADERBOARD);
       if (!response.ok) {
         throw new Error('Failed to fetch leaderboard data');
       }

@@ -200,13 +200,45 @@ If you prefer to set up manually:
 
 ## 🚀 Deployment
 
-### Frontend (Vercel/Netlify)
-1. Build the project: `npm run build`
-2. Deploy the `frontend/build` folder to your hosting platform
+### Frontend (Vercel) - FREE
+1. **Install Vercel CLI** (optional):
+   ```bash
+   npm i -g vercel
+   ```
 
-### Backend (Render/Railway)
-1. Deploy the `backend` folder to your hosting platform
-2. Update the API URL in frontend components if needed
+2. **Deploy to Vercel**:
+   - Go to [vercel.com](https://vercel.com)
+   - Sign up/Login with GitHub
+   - Click "New Project"
+   - Import your GitHub repository
+   - Set root directory to `frontend`
+   - Deploy!
+
+3. **Set Environment Variable**:
+   - In Vercel dashboard, go to Settings → Environment Variables
+   - Add: `REACT_APP_API_URL` = `https://your-railway-backend-url.railway.app`
+
+### Backend (Railway) - FREE
+1. **Deploy to Railway**:
+   - Go to [railway.app](https://railway.app)
+   - Sign up/Login with GitHub
+   - Click "New Project" → "Deploy from GitHub repo"
+   - Select your repository
+   - Set root directory to `backend`
+   - Deploy!
+
+2. **Get Backend URL**:
+   - After deployment, copy the Railway URL
+   - Update the `REACT_APP_API_URL` in Vercel with this URL
+
+### Alternative: Netlify + Render
+- **Frontend**: Deploy to Netlify (similar to Vercel)
+- **Backend**: Deploy to Render (free tier available)
+
+### Manual Deployment Steps
+1. **Backend**: Deploy `backend` folder to Railway/Render
+2. **Frontend**: Deploy `frontend` folder to Vercel/Netlify
+3. **Connect**: Set environment variable `REACT_APP_API_URL` to your backend URL
 
 ## 🤝 Contributing
 
