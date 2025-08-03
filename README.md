@@ -2,6 +2,10 @@
 
 A modern, responsive intern dashboard built with React frontend and Express.js backend. Track your progress, view leaderboards, and unlock rewards with a beautiful UI powered by Tailwind CSS and Framer Motion animations.
 
+## 🌐 Live Demo
+- **Frontend**: [https://intern-dashboard.vercel.app](https://intern-dashboard.vercel.app)
+- **Backend API**: [https://intern-dashboard-site-production.up.railway.app](https://intern-dashboard-site-production.up.railway.app)
+
 ## ✨ Features
 
 ### Frontend (React)
